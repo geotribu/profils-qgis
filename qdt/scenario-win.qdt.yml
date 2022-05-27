@@ -1,0 +1,26 @@
+metadata:
+  title: "Scénario de déploiement des profils Geotribu"
+  id: scenario-geotribu-win32
+  description: >-
+    Scénario QGIS Deployment Toolbelt pour déployer les profils de Geotribu sur Windows.
+
+settings:
+  DEBUG: false
+  SCENARIO_VALIDATION: true
+
+steps:
+  - name: Variables d'environnement persistantes
+    uses: manage-env-vars
+    with:
+      - name: QDT_SCENARIO
+        value: GEOTRIBU_WIN32
+        scope: "user"
+        action: "add"
+
+  - name: Synchronisation des profils depuis le dépôt public
+    uses: qprofiles-manager
+    with:
+      action: download
+      source: https://github.com/geotribu/profils-qgis.git
+      protocol: git
+      local_destination: ~/.cache/qgis-deployment-toolbelt/Geotribu
