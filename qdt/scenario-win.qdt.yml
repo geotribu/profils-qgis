@@ -24,3 +24,16 @@ steps:
       source: https://github.com/geotribu/profils-qgis.git
       protocol: git
       local_destination: ~/.cache/qgis-deployment-toolbelt/Geotribu
+
+  - name: Créer des raccourcis pour les profils
+    uses: shortcuts-manager
+    with:
+      action: create_or_restore
+      include:
+        - profile: geotribu_tuto_ferrargis
+          label: "QGIS - Conf QGIS FR"
+          additional_arguments: "--noversioncheck"
+          desktop: false
+          start_menu: true
+          icon: "logo_ferrari.ico"
+          qgis_path: "%PROGRAMFILES%/QGIS 3.22/bin/qgis-ltr-bin.exe"
