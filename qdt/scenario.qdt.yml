@@ -1,0 +1,40 @@
+# This is a sample of a YAML file for the QGIS Deployment Toolbelt scenario.
+# For now, it's more a roadmap than a real description of what it's implemented.
+
+metadata:
+  title: "Scénario de déploiement des profils Geotribu pour QGIS."
+  id: sample-scenario-good
+  description: >-
+    Scénario QGIS Deployment Toolbelt pour déployer les profils QGIS de Geotribu.
+
+# Toolbelt settings
+settings:
+  LOCAL_QDT_WORKDIR: ~/.cache/qgis-deployment-toolbelt/Geotribu/
+  SCENARIO_VALIDATION: true
+
+# Deployment workflow, step by step
+steps:
+  - name: "Synchronise les profils depuis le dépôt Git distant"
+    uses: qprofiles-manager
+    with:
+      action: download
+      source: https://github.com/geotribu/profils-qgis.git
+      protocol: git
+      branch: main
+
+  - name: "Télécharge les plugins listés dans les profils"
+    uses: qplugins-downloader
+    with:
+      force: false
+      threads: 5
+
+  - name: "Synchronise les plugins téléchargés avec ceux présents dans les profils installés"
+    uses: qplugins-synchronizer
+    with:
+      action: create_or_restore
+
+  - name: Set splash screen
+    uses: splash-screen-manager
+    with:
+      action: create_or_restore
+      strict: true
