@@ -1,18 +1,23 @@
 {
     "name": "geotribu_tuto_ferrargis",
-    "description": "Profil QGIS pour faire une carte de ferraris.",
+    "description": "Profil QGIS pour faire une carte dans le style de Ferraris, en suivant le tutoriel Geotribu.",
     "author": "Julien Moura",
     "email": "geotribu@gmail.com",
     "icon": "images/logo_ferrari.ico",
-    "qgisMinimumVersion": "3.22",
-    "qgisMaximumVersion": "3.28",
-    "version": "1.0.0",
+    "qgisMinimumVersion": "3.24",
+    "qgisMaximumVersion": "3.99",
+    "version": "1.1.0",
     "plugins": [
       {
         "name": "qgis-maptiler-plugin",
-        "version": "3.0.3",
-        "url": "https://plugins.qgis.org/plugins/qgis-maptiler-plugin/version/3.0.3/download/",
-        "type": "remote"
+        "version": "3.1.1",
+        "official_repository": true
+      },
+      {
+        "name": "QTribu",
+        "version": "0.14.2",
+        "official_repository": true,
+        "folder_name": "qtribu"
       }
     ]
   }
