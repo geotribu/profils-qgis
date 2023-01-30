@@ -9,7 +9,7 @@ Cet entrepôt contient des profils QGIS et un scénario de déploiement compatib
 ### Prérequis
 
 - Python 3.10+
-- Connexion rseau autorisée sur :
+- connexion réseau autorisée sur :
   - github.com
   - plugins.qgis.org
 
