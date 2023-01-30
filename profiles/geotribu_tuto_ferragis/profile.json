@@ -10,14 +10,17 @@
     "plugins": [
       {
         "name": "qgis-maptiler-plugin",
-        "version": "3.1.1",
-        "official_repository": true
+        "folder_name": "qgis-maptiler-plugin",
+        "official_repository": true,
+        "plugin_id": 2081,
+        "version": "3.1.1"
       },
       {
         "name": "QTribu",
-        "version": "0.14.2",
+        "folder_name": "qtribu",
         "official_repository": true,
-        "folder_name": "qtribu"
+        "plugin_id": 2733,
+        "version": "0.14.2"
       }
     ]
   }
