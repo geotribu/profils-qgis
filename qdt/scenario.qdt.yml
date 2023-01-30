@@ -3,13 +3,17 @@
 
 metadata:
   title: "Scénario de déploiement des profils Geotribu pour QGIS."
-  id: sample-scenario-good
+  id: geotribu-profils-qgis
   description: >-
     Scénario QGIS Deployment Toolbelt pour déployer les profils QGIS de Geotribu.
 
 # Toolbelt settings
 settings:
   LOCAL_QDT_WORKDIR: ~/.cache/qgis-deployment-toolbelt/Geotribu/
+  QGIS_EXE_PATH:
+    linux: /usr/bin/qgis
+    mac: /usr/bin/qgis
+    windows: "%PROGRAMFILES%/QGIS/3_22/bin/qgis-bin.exe"
   SCENARIO_VALIDATION: true
 
 # Deployment workflow, step by step
@@ -37,4 +41,16 @@ steps:
     uses: splash-screen-manager
     with:
       action: create_or_restore
-      strict: true
+      strict: false
+
+  - name: Create shortcuts for profiles
+    uses: shortcuts-manager
+    with:
+      action: create_or_restore
+      include:
+        - profile: geotribu_tuto_ferrargis
+          label: "QGIS - Tuto Ferrargis"
+          additional_arguments: "--noversioncheck"
+          desktop: true
+          start_menu: true
+          icon: logo_ferrari.ico
