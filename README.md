@@ -32,7 +32,7 @@ pip install -U -r requirements.txt
 ### Exécuter QDT avec le scénario Geotribu
 
 ```sh
-qgis-deployment-toolbelt -v -s qdt/scenario.qdt.yml 
+qgis-deployment-toolbelt -v -s qdt/scenario.qdt.yml
 ```
 
 ----
