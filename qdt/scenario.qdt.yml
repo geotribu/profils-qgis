@@ -1,5 +1,4 @@
-# This is a sample of a YAML file for the QGIS Deployment Toolbelt scenario.
-# For now, it's more a roadmap than a real description of what it's implemented.
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json
 
 metadata:
   title: "Scénario de déploiement des profils Geotribu pour QGIS."
