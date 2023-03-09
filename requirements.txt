@@ -1,1 +1,5 @@
-qgis-deployment-toolbelt>=0.16,<0.17
+# required
+qgis-deployment-toolbelt>=0.19,<0.25
+
+# tooling
+pre-commit>3,<4

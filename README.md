@@ -1,4 +1,4 @@
-# Profils QGIS des articles Geotribu
+# Profils QGIS liés aux articles Geotribu
 
 Cet entrepôt contient des profils QGIS et un scénario de déploiement compatible [QGIS Deployment Toolbelt](https://guts.github.io/qgis-deployment-cli/).
 
@@ -39,4 +39,8 @@ qgis-deployment-toolbelt -v -s qdt/scenario.qdt.yml
 
 ## Développement
 
-- installer pre-commit et les git hooks
+- installer pre-commit et les git hooks :
+
+```sh
+pre-commit install
+```
