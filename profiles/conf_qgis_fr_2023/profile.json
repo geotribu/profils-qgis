@@ -4,7 +4,7 @@
     "description": "Profil contenant les différents plugins présentés aux rencontres des utilisateurs francophones de QGIS en 2023.",
     "author": "Julien Moura",
     "email": "qgis@oslandia.com",
-    "icon": "images/qgis_icon.ico",
+    "icon": "images/qgis_icon_conf_qgis_fr_2023.ico",
     "splash": "images/splash_qgis-fr_600x287.png",
     "qgisMinimumVersion": "3.22.0",
     "qgisMaximumVersion": "3.40.0",
