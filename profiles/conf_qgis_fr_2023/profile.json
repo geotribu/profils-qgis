@@ -1,0 +1,21 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
+    "name": "conf_qgis_fr_2023",
+    "description": "Profil contenant les différents plugins présentés aux rencontres des utilisateurs francophones de QGIS en 2023.",
+    "author": "Julien Moura",
+    "email": "qgis@oslandia.com",
+    "icon": "images/qgis_icon.ico",
+    "splash": "images/splash_qgis-fr_600x287.png",
+    "qgisMinimumVersion": "3.22.0",
+    "qgisMaximumVersion": "3.40.0",
+    "version": "1.0.0",
+    "plugins": [
+        {
+            "name": "Lizmap",
+            "version": "3.11.0",
+            "location": "remote",
+            "official_repository": true,
+            "plugin_id": 72
+        }
+    ]
+}
