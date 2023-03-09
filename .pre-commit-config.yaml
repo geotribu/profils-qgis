@@ -35,3 +35,17 @@ repos:
         language: python
         types: [python]
         args: ["--select=E9,F63,F7,F82"]
+
+  # - repo: https://github.com/python-jsonschema/check-jsonschema
+  #   rev: 0.22.0
+  #   hooks:
+  #     - id: check-jsonschema
+  #       additional_dependencies: ["pyjson5"]
+  #       name: "Check QDT scenarii"
+  #       files: ^qdt/[^/]+$
+  #       types: [yaml]
+  #       args:
+  #         [
+  #           "--schemafile",
+  #           "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json",
+  #         ]
