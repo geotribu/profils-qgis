@@ -11,11 +11,12 @@
     "version": "1.0.0",
     "plugins": [
         {
+            "folder_name": "lizmap",
             "name": "Lizmap",
-            "version": "3.11.0",
             "location": "remote",
             "official_repository": true,
-            "plugin_id": 72
+            "plugin_id": 72,
+            "version": "3.11.0"
         }
     ]
 }
