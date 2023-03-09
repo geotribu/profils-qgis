@@ -8,7 +8,7 @@ metadata:
 
 # Toolbelt settings
 settings:
-  LOCAL_QDT_WORKDIR: ~/.cache/qgis-deployment-toolbelt/Geotribu/
+  LOCAL_WORK_DIR: ~/.cache/qgis-deployment-toolbelt/Geotribu/
   QGIS_EXE_PATH:
     linux: /usr/bin/qgis
     mac: /usr/bin/qgis
@@ -21,9 +21,10 @@ steps:
     uses: qprofiles-manager
     with:
       action: download
-      source: https://github.com/geotribu/profils-qgis.git
-      protocol: git
       branch: main
+      protocol: git
+      source: https://github.com/geotribu/profils-qgis.git
+      sync_mode: only_new_version
 
   - name: "Télécharge les plugins listés dans les profils"
     uses: qplugins-downloader
@@ -47,9 +48,13 @@ steps:
     with:
       action: create_or_restore
       include:
-        - profile: geotribu_tuto_ferrargis
-          label: "QGIS - Tuto Ferrargis"
+        - profile: geotribu
+          label: "QGIS - Geotribu"
           additional_arguments: "--noversioncheck"
           desktop: true
           start_menu: true
-          icon: logo_ferrari.ico
+        - profile: conf_qgis_fr_2023
+          label: "QGIS - Conf QGIS FR 2023"
+          additional_arguments: "--noversioncheck"
+          desktop: true
+          start_menu: true
