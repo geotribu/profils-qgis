@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
+  "name": "Geotribu",
+  "folder_name": "geotribu",
+  "description": "Profil QGIS taillé par et pour Geotribu.",
+  "author": "Julien Moura",
+  "email": "geotribu@gmail.com",
+  "qgisMinimumVersion": "3.24",
+  "qgisMaximumVersion": "3.99",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "Layers menu from project",
+      "folder_name": "menu_from_project",
+      "official_repository": true,
+      "plugin_id": 43,
+      "version": "v2.0.6"
+    },
+    {
+      "name": "QuickOSM",
+      "folder_name": "QuickOSM",
+      "location": "remote",
+      "official_repository": true,
+      "plugin_id": 2733,
+      "version": "2.1.1"
+    },
+    {
+      "name": "QTribu",
+      "folder_name": "qtribu",
+      "official_repository": true,
+      "plugin_id": 2733,
+      "version": "0.14.2"
+    }
+  ]
+}
