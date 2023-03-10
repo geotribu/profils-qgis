@@ -24,7 +24,7 @@ steps:
       branch: main
       protocol: git
       source: https://github.com/geotribu/profils-qgis.git
-      sync_mode: only_new_version
+      sync_mode: overwrite
 
   - name: "Télécharge les plugins listés dans les profils"
     uses: qplugins-downloader
@@ -48,13 +48,20 @@ steps:
     with:
       action: create_or_restore
       include:
-        - profile: geotribu
-          label: "QGIS - Geotribu"
-          additional_arguments: "--noversioncheck"
-          desktop: true
-          start_menu: true
+        # - profile: Geotribu
+        #   label: "QGIS - Geotribu"
+        #   additional_arguments: "--noversioncheck"
+        #   desktop: true
+        #   start_menu: true
         - profile: conf_qgis_fr_2023
           label: "QGIS - Conf QGIS FR 2023"
           additional_arguments: "--noversioncheck"
           desktop: true
           start_menu: true
+          icon: qgis_icon_conf_qgis_fr_2023.ico
+        # - profile: geotribu_tuto_ferrargis
+        #   label: "QGIS - Tuto Ferrargis"
+        #   additional_arguments: "--noversioncheck"
+        #   desktop: true
+        #   start_menu: true
+        #   icon: logo_ferrari.ico
