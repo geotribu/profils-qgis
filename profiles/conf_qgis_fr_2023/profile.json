@@ -11,12 +11,60 @@
     "version": "1.0.0",
     "plugins": [
         {
+            "folder_name": "craig",
+            "name": "CRAIG",
+            "official_repository": true,
+            "plugin_id": 2889,
+            "version": "0.3.0"
+        },
+        {
+            "folder_name": "geotuileur",
+            "name": "Geotuileur",
+            "official_repository": true,
+            "plugin_id": 2782,
+            "version": "1.0.0"
+        },
+        {
+            "folder_name": "ICEtool",
+            "name": "ICEtool",
+            "official_repository": true,
+            "plugin_id": 2582,
+            "version": "1.4.0"
+        },
+        {
+            "folder_name": "LandSurveyCodesImport",
+            "name": "Land Survey Codes Import",
+            "official_repository": true,
+            "plugin_id": 1538,
+            "version": "v0.3.0"
+        },
+        {
             "folder_name": "lizmap",
             "name": "Lizmap",
-            "location": "remote",
             "official_repository": true,
             "plugin_id": 72,
             "version": "3.11.0"
+        },
+        {
+            "folder_name": "Mergin",
+            "name": "Mergin",
+            "official_repository": true,
+            "plugin_id": 1703,
+            "version": "2023.1"
+        },
+        {
+            "folder_name": "qfieldsync",
+            "name": "QField Sync",
+            "official_repository": true,
+            "plugin_id": 1083,
+            "version": "v4.4.8"
+        },
+        {
+            "folder_name": "QompliGIS",
+            "name": "QompliGIS",
+            "official_repository": true,
+            "plugin_id": 2509,
+            "version": "v1.2.0"
         }
     ]
 }
