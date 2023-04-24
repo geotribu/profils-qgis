@@ -8,7 +8,7 @@
     "splash": "images/splash_qgis-fr_600x287.png",
     "qgisMinimumVersion": "3.22.0",
     "qgisMaximumVersion": "3.40.0",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "plugins": [
         {
             "folder_name": "craig",
@@ -43,7 +43,7 @@
             "name": "Lizmap",
             "official_repository": true,
             "plugin_id": 72,
-            "version": "3.11.0"
+            "version": "3.12.0"
         },
         {
             "folder_name": "Mergin",
