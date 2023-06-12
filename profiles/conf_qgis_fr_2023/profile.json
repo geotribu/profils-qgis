@@ -65,6 +65,13 @@
             "official_repository": true,
             "plugin_id": 2509,
             "version": "v1.2.0"
+        },
+        {
+            "name": "QTribu",
+            "folder_name": "qtribu",
+            "official_repository": true,
+            "plugin_id": 2733,
+            "version": "0.14.2"
         }
     ]
 }
