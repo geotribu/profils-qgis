@@ -8,36 +8,34 @@ metadata:
 
 # Toolbelt settings
 settings:
-  LOCAL_WORK_DIR: ~/.cache/qgis-deployment-toolbelt/Geotribu/
-  # QGIS_EXE_PATH:
-  #   linux: /usr/bin/qgis
-  #   mac: /usr/bin/qgis
-  #   windows: "%PROGRAMFILES%/QGIS/3_22/bin/qgis-bin.exe"
   SCENARIO_VALIDATION: true
 
 # Deployment workflow, step by step
 steps:
-  - name: "Synchronise les profils depuis le dépôt Git distant"
-    uses: qprofiles-manager
+  - name: Télécharge les profils depuis le dépôt Git distant
+    uses: qprofiles-downloader
     with:
-      action: download
       branch: main
-      protocol: git
+      protocol: git_remote
       source: https://github.com/geotribu/profils-qgis.git
+
+  - name: Synchronise les profils installés à partir de ceux téléchargés
+    uses: qprofiles-synchronizer
+    with:
       sync_mode: overwrite
 
-  - name: "Télécharge les plugins listés dans les profils"
+  - name: Télécharge les plugins listés dans tous les profils téléchargés
     uses: qplugins-downloader
     with:
       force: false
       threads: 5
 
-  - name: "Synchronise les plugins téléchargés avec ceux présents dans les profils installés"
+  - name: Synchronise les plugins téléchargés avec ceux présents dans les profils installés
     uses: qplugins-synchronizer
     with:
       action: create_or_restore
 
-  - name: Set splash screen
+  - name: Installe les splash screens personnalisés
     uses: splash-screen-manager
     with:
       action: create_or_restore
@@ -48,11 +46,11 @@ steps:
     with:
       action: create_or_restore
       include:
-        # - profile: Geotribu
-        #   label: "QGIS - Geotribu"
-        #   additional_arguments: "--noversioncheck"
-        #   desktop: true
-        #   start_menu: true
+        - profile: Geotribu
+          label: "QGIS - Geotribu"
+          additional_arguments: "--noversioncheck"
+          desktop: true
+          start_menu: true
         - profile: conf_qgis_fr_2023
           label: "QGIS - Conf QGIS FR 2023"
           additional_arguments: "--noversioncheck"
