@@ -1,7 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: pip
+    directory: "/"
     schedule:
       interval: monthly
-      time: "04:00"
+      time: "12:12"
       timezone: Europe/Paris
