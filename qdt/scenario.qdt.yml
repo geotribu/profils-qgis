@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json
 
 metadata:
-  title: "Scénario de déploiement des profils Geotribu pour QGIS."
+  title: Scénario de déploiement des profils Geotribu pour QGIS.
   id: geotribu-profils-qgis
   description: >-
     Scénario QGIS Deployment Toolbelt pour déployer les profils QGIS de Geotribu.
@@ -12,6 +12,21 @@ settings:
 
 # Deployment workflow, step by step
 steps:
+  - name: Variables d'environnement persistantes
+    uses: manage-env-vars
+    with:
+      - name: GEOTRIBU_RANK
+        value: community_user
+        scope: "user"
+        action: "add"
+
+  - name: Find installed QGIS
+    uses: qgis-installation-finder
+    with:
+      version_priority:
+        - "3.34"
+        - "3.28"
+
   - name: Télécharge les profils depuis le dépôt Git distant
     uses: qprofiles-downloader
     with:
@@ -22,7 +37,7 @@ steps:
   - name: Synchronise les profils installés à partir de ceux téléchargés
     uses: qprofiles-synchronizer
     with:
-      sync_mode: overwrite
+      sync_mode: only_new_version
 
   - name: Télécharge les plugins listés dans tous les profils téléchargés
     uses: qplugins-downloader
@@ -51,15 +66,3 @@ steps:
           additional_arguments: "--noversioncheck"
           desktop: true
           start_menu: true
-        - profile: conf_qgis_fr_2023
-          label: "QGIS - Conf QGIS FR 2023"
-          additional_arguments: "--noversioncheck"
-          desktop: true
-          start_menu: true
-          icon: qgis_icon_conf_qgis_fr_2023.ico
-        # - profile: geotribu_tuto_ferrargis
-        #   label: "QGIS - Tuto Ferrargis"
-        #   additional_arguments: "--noversioncheck"
-        #   desktop: true
-        #   start_menu: true
-        #   icon: logo_ferrari.ico
