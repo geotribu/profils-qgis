@@ -29,7 +29,7 @@ repos:
         args: ["--profile", "black", "--filter-files"]
 
   - repo: https://github.com/pycqa/flake8
-    rev: 7.0.0
+    rev: 7.1.0
     hooks:
       - id: flake8
         language: python
@@ -42,7 +42,7 @@ repos:
       - id: check-json5
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.28.3
+    rev: 0.28.5
     hooks:
       - id: check-jsonschema
         name: Check QDT profiles
@@ -52,7 +52,7 @@ repos:
           - https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.28.3
+    rev: 0.28.5
     hooks:
       - id: check-jsonschema
         name: Check QDT scenarios
