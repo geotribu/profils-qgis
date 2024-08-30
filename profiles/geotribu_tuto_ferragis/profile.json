@@ -21,7 +21,22 @@
       "folder_name": "qtribu",
       "official_repository": true,
       "plugin_id": 2733,
-      "version": "0.17.1"
+      "version": "0.18.0"
+    }
+  ],
+  "rules": [
+    {
+      "name": "Disabled",
+      "description": "Disable deployment.",
+      "conditions": {
+        "all": [
+          {
+            "path": "$.date.current_year",
+            "value": 2022,
+            "operator": "less_than"
+          }
+        ]
+      }
     }
   ]
 }

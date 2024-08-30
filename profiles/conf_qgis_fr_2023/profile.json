@@ -1,77 +1,92 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
-    "name": "conf_qgis_fr_2023",
-    "description": "Profil contenant les différents plugins présentés aux rencontres des utilisateurs francophones de QGIS en 2023.",
-    "author": "Julien Moura",
-    "email": "qgis@oslandia.com",
-    "icon": "images/qgis_icon_conf_qgis_fr_2023.ico",
-    "splash": "images/splash_qgis-fr_600x287.png",
-    "qgisMinimumVersion": "3.22.0",
-    "qgisMaximumVersion": "3.40.0",
-    "version": "1.0.1",
-    "plugins": [
-        {
-            "folder_name": "craig",
-            "name": "CRAIG",
-            "official_repository": true,
-            "plugin_id": 2889,
-            "version": "0.3"
-        },
-        {
-            "folder_name": "geotuileur",
-            "name": "Geotuileur",
-            "official_repository": true,
-            "plugin_id": 2782,
-            "version": "1.0.0"
-        },
-        {
-            "folder_name": "ICEtool",
-            "name": "ICEtool",
-            "official_repository": true,
-            "plugin_id": 2582,
-            "version": "1.4.0"
-        },
-        {
-            "folder_name": "LandSurveyCodesImport",
-            "name": "Land Survey Codes Import",
-            "official_repository": true,
-            "plugin_id": 1538,
-            "version": "v0.3.0"
-        },
-        {
-            "folder_name": "lizmap",
-            "name": "Lizmap",
-            "official_repository": true,
-            "plugin_id": 72,
-            "version": "3.12.0"
-        },
-        {
-            "folder_name": "Mergin",
-            "name": "Mergin",
-            "official_repository": true,
-            "plugin_id": 1703,
-            "version": "2023.1"
-        },
-        {
-            "folder_name": "qfieldsync",
-            "name": "QField Sync",
-            "official_repository": true,
-            "plugin_id": 1083,
-            "version": "v4.4.8"
-        },
-        {
-            "folder_name": "QompliGIS",
-            "name": "QompliGIS",
-            "official_repository": true,
-            "plugin_id": 2509,
-            "version": "v1.2.0"
-        },
-        {
-            "name": "QTribu",
-            "folder_name": "qtribu",
-            "official_repository": true,
-            "plugin_id": 2733,
-            "version": "0.17.1"
-        }
-    ]
+  "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
+  "name": "conf_qgis_fr_2023",
+  "description": "Profil contenant les différents plugins présentés aux rencontres des utilisateurs francophones de QGIS en 2023.",
+  "author": "Julien Moura",
+  "email": "qgis@oslandia.com",
+  "icon": "images/qgis_icon_conf_qgis_fr_2023.ico",
+  "splash": "images/splash_qgis-fr_600x287.png",
+  "qgisMinimumVersion": "3.22.0",
+  "qgisMaximumVersion": "3.40.0",
+  "version": "1.0.1",
+  "plugins": [
+    {
+      "folder_name": "craig",
+      "name": "CRAIG",
+      "official_repository": true,
+      "plugin_id": 2889,
+      "version": "0.3"
+    },
+    {
+      "folder_name": "geotuileur",
+      "name": "Geotuileur",
+      "official_repository": true,
+      "plugin_id": 2782,
+      "version": "1.0.0"
+    },
+    {
+      "folder_name": "ICEtool",
+      "name": "ICEtool",
+      "official_repository": true,
+      "plugin_id": 2582,
+      "version": "1.4.1"
+    },
+    {
+      "folder_name": "LandSurveyCodesImport",
+      "name": "Land Survey Codes Import",
+      "official_repository": true,
+      "plugin_id": 1538,
+      "version": "v0.3.0"
+    },
+    {
+      "folder_name": "lizmap",
+      "name": "Lizmap",
+      "official_repository": true,
+      "plugin_id": 72,
+      "version": "4.3.1"
+    },
+    {
+      "folder_name": "Mergin",
+      "name": "Mergin",
+      "official_repository": true,
+      "plugin_id": 1703,
+      "version": "2024.1"
+    },
+    {
+      "folder_name": "qfieldsync",
+      "name": "QField Sync",
+      "official_repository": true,
+      "plugin_id": 1083,
+      "version": "v4.9.1"
+    },
+    {
+      "folder_name": "QompliGIS",
+      "name": "QompliGIS",
+      "official_repository": true,
+      "plugin_id": 2509,
+      "version": "v1.2.0"
+    },
+    {
+      "name": "QTribu",
+      "folder_name": "qtribu",
+      "official_repository": true,
+      "plugin_id": 2733,
+      "version": "0.16.0"
+    }
+  ],
+  "rules": [
+    {
+      "name": "2023",
+      "description": "Deploy only during 2023.",
+      "conditions": {
+        "all": [
+          {
+            "path": "$.date.current_year",
+            "value": 2023,
+            "operator": "equal"
+          }
+        ]
+      }
+    }
+  ]
 }

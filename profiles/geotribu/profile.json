@@ -7,7 +7,7 @@
   "email": "geotribu@gmail.com",
   "qgisMinimumVersion": "3.28.0",
   "qgisMaximumVersion": "3.99.10",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "plugins": [
     {
       "name": "Layers menu from project",
@@ -21,7 +21,22 @@
       "folder_name": "qtribu",
       "official_repository": true,
       "plugin_id": 2733,
-      "version": "0.17.1"
+      "version": "0.18.0"
+    }
+  ],
+  "rules": [
+    {
+      "name": "2024+",
+      "description": "Deploy only after 2024.",
+      "conditions": {
+        "all": [
+          {
+            "path": "$.date.current_year",
+            "value": 2024,
+            "operator": "greater_than"
+          }
+        ]
+      }
     }
   ]
 }
