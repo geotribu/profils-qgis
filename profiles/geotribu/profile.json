@@ -33,7 +33,7 @@
           {
             "path": "$.date.current_year",
             "value": 2024,
-            "operator": "greater_than"
+            "operator": "greater_than_inclusive"
           }
         ]
       }
