@@ -4,43 +4,95 @@ Cet entrepôt contient des profils QGIS et un scénario de déploiement compatib
 
 ----
 
-## Démarrage rapide
+## Déployer les profils
 
 ### Prérequis
 
-- Python 3.10+
+- QGIS Deployment Toolbelt (aka QDT) >= 0.34 (voir [la page installation](https://guts.github.io/qgis-deployment-cli/usage/installation.html))
 - connexion réseau autorisée sur :
   - github.com
   - plugins.qgis.org
 
-### Cloner ou télécharger ce dépôt
+### Exécuter
+
+#### Avec QDT installée sous forme de paquet Python (avec pip)
 
 ```sh
-git clone https://github.com/geotribu/profils-qgis.git geotribu-profils-qgis
-cd geotribu-profils-qgis
+qdt -s https://raw.githubusercontent.com/geotribu/profils-qgis/main/qdt/scenario.qdt.yml
 ```
 
-### Installer QDT
+#### Avec QDT téléchargée sous forme d'exécutable autoporteur (sans installation préalable requise)
 
-> De préférence dans un environnement virtuel
+Sur Linux :
+
+```sh
+chmod +x qdt.bin
+./qdt.bin -s https://raw.githubusercontent.com/geotribu/profils-qgis/main/qdt/scenario.qdt.yml
+```
+
+Sur Windows :
+
+1. Renommer l'exécutable en `qdt.exe`
+1. Exécuter :
+
+  ```powershell
+  ./qdt.exe -s https://raw.githubusercontent.com/geotribu/profils-qgis/main/qdt/scenario.qdt.yml
+  ```
+
+----
+
+## Contribuer aux profils
+
+### Prérequis
+
+- Python >= 3.10
+- connexion réseau sur :
+  - gitlab.com
+  - plugins.qgis.org
+  - pypi.org
+
+### Environnement de travail
+
+Création d'un environnement virtuel :
+
+```sh
+python -m venv .venv
+# Sur Windows :
+# py -3 -m venv .venv
+
+. .venv/bin/activate
+# Sur Windows :
+# .venv/Scripts/activate
+```
+
+Installation des dépendances :
 
 ```sh
 python -m pip install -U pip setuptools wheel
 pip install -U -r requirements.txt
-```
-
-### Exécuter QDT avec le scénario Geotribu
-
-```sh
-qgis-deployment-toolbelt -v -s qdt/scenario.qdt.yml
-```
-
-----
-
-## Développement
-
-- installer pre-commit et les git hooks :
-
-```sh
 pre-commit install
+```
+
+### Exécuter QDT
+
+Depuis l'environnement virtuel dans le projet cloné :
+
+```sh
+qgis-deployment-toolbelt -v -s qdt\scenario.qdt.yml
+```
+
+### Vérifier la conformité des profils
+
+> Vérification réalisée à l'aide des JSON Schema
+
+```sh
+check-jsonschema --schemafile https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json profiles/*/profile.json
+```
+
+### Vérifier la conformité des scénarios à l'aide des JSON Schemas
+
+> Vérification réalisée à l'aide des JSON Schema
+
+```sh
+check-jsonschema --default-filetype yaml --base-uri https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/ --schemafile https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json qdt_scenarii/*.qdt.yml
 ```

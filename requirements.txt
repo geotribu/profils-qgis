@@ -2,4 +2,6 @@
 qgis-deployment-toolbelt>=0.34.2,<1
 
 # tooling
+check-jsonschema>=0.28.0,<1
+jsonschema[format]>=4.21
 pre-commit>3.6,<4
