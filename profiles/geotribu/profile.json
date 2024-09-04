@@ -5,6 +5,7 @@
   "description": "Profil QGIS taillé par et pour Geotribu.",
   "author": "Julien Moura",
   "email": "geotribu@gmail.com",
+  "icon": "images/geotribu.ico",
   "qgisMinimumVersion": "3.28.0",
   "qgisMaximumVersion": "3.99.10",
   "version": "1.2.0",
