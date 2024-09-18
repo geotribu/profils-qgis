@@ -32,9 +32,8 @@ repos:
     rev: 7.1.1
     hooks:
       - id: flake8
-        language: python
-        types: [python]
-        args: ["--select=E9,F63,F7,F82"]
+        args:
+          - --select=E9,F63,F7,F82
 
   - repo: https://gitlab.com/bmares/check-json5
     rev: v1.0.0
@@ -48,6 +47,9 @@ repos:
         name: Check QDT profiles
         files: ^profiles/.*\.json$
         args:
+          - --no-cache
+          - --base-uri
+          - https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/
           - --schemafile
           - https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json
 
