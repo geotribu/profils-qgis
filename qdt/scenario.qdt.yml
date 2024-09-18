@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/qdt_scenario.json
 
 metadata:
   title: Scénario de déploiement des profils Geotribu pour QGIS.
@@ -23,6 +23,10 @@ steps:
   - name: Find installed QGIS
     uses: qgis-installation-finder
     with:
+      search_paths:
+        - "%PROGRAMFILES%"
+        - C:\\OSGeo4W
+        - "%PROGRAMFILES%\\QGIS"
       version_priority:
         - "3.34"
         - "3.28"
