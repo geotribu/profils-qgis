@@ -86,7 +86,7 @@ qgis-deployment-toolbelt -v -s qdt\scenario.qdt.yml
 > Vérification réalisée à l'aide des JSON Schema
 
 ```sh
-check-jsonschema --no-cache --schemafile https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json profiles/*/profile.json --base-uri https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/
+check-jsonschema --no-cache --schemafile https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/main/docs/schemas/profile/qgis_profile.json profiles/*/profile.json
 ```
 
 ### Vérifier la conformité des scénarios à l'aide des JSON Schemas
@@ -94,5 +94,5 @@ check-jsonschema --no-cache --schemafile https://raw.githubusercontent.com/Guts/
 > Vérification réalisée à l'aide des JSON Schema
 
 ```sh
-check-jsonschema --default-filetype yaml --base-uri https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/ --schemafile https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json qdt/*.qdt.yml
+check-jsonschema --default-filetype yaml --base-uri https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/refs/heads/main/docs/schemas/scenario/ --schemafile https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/refs/heads/main/docs/schemas/scenario/qdt_scenario.json qdt/*.qdt.yml
 ```

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
+  "$schema": "https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/main/docs/schemas/profile/qgis_profile.json",
   "name": "conf_qgis_fr_2023",
   "description": "Profil contenant les différents plugins présentés aux rencontres des utilisateurs francophones de QGIS en 2023.",
   "author": "Julien Moura",

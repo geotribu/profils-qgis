@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
+  "$schema": "https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/main/docs/schemas/profile/qgis_profile.json",
   "name": "geotribu_tuto_ferrargis",
   "description": "Profil QGIS pour faire une carte dans le style de Ferraris, en suivant le tutoriel Geotribu.",
   "author": "Julien Moura",
