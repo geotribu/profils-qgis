@@ -51,6 +51,8 @@ repos:
     hooks:
       - id: check-jsonschema
         name: Check QDT profiles
+        additional_dependencies:
+          - pyright[nodejs]
         files: ^profiles/.*\.json$
         args:
           - --no-cache
