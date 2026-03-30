@@ -20,13 +20,13 @@ repos:
         args:
           - --markdown-linebreak-ext=md
 
-  - repo: https://github.com/psf/black
-    rev: 25.9.0
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 26.3.1
     hooks:
       - id: black
 
   - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
+    rev: 8.0.1
     hooks:
       - id: isort
         args:
@@ -42,12 +42,12 @@ repos:
           - --select=E9,F63,F7,F82
 
   - repo: https://gitlab.com/bmares/check-json5
-    rev: v1.0.0
+    rev: v1.0.1
     hooks:
       - id: check-json5
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 0.37.1
     hooks:
       - id: check-jsonschema
         name: Check QDT profiles
@@ -60,7 +60,7 @@ repos:
           - https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/main/docs/schemas/profile/qgis_profile.json
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 0.37.1
     hooks:
       - id: check-jsonschema
         name: Check QDT scenarios
