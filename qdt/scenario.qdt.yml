@@ -24,12 +24,16 @@ steps:
     uses: qgis-installation-finder
     with:
       search_paths:
-        - "%PROGRAMFILES%"
-        - C:\\OSGeo4W
         - "%PROGRAMFILES%\\QGIS"
+        - "%PROGRAMFILES%"
+        - "C:\\OSGeo4W"
+        - "/usr/bin/qgis"
       version_priority:
+        - "3.44"
+        - "3.40"
         - "3.34"
         - "3.28"
+        - "4.0"
 
   - name: Télécharge les profils depuis le dépôt Git distant
     uses: qprofiles-downloader
@@ -67,6 +71,7 @@ steps:
       include:
         - profile: Geotribu
           label: "QGIS - Geotribu"
-          additional_arguments: "--noversioncheck"
+          additional_arguments:
+            - --noversioncheck
           desktop: true
           start_menu: true
