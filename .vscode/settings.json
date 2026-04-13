@@ -11,7 +11,7 @@
     },
     // Extensions
     "yaml.schemas": {
-        "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/scenario/schema.json": [
+        "https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/refs/heads/main/docs/schemas/scenario/qdt_scenario.json": [
             "**/*scenario*qdt.yml",
             "tests/fixtures/scenarios/*.qdt.yml",
         ]
