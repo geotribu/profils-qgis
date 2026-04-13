@@ -67,6 +67,7 @@ steps:
       include:
         - profile: Geotribu
           label: "QGIS - Geotribu"
-          additional_arguments: "--noversioncheck"
+          additional_arguments:
+            - --noversioncheck
           desktop: true
           start_menu: true
