@@ -18,6 +18,13 @@
       "version": "2.1.0"
     },
     {
+      "name": "QChat",
+      "folder_name": "qchat",
+      "official_repository": true,
+      "plugin_id": 4033,
+      "version": "1.3.0"
+    },
+    {
       "name": "QTribu",
       "folder_name": "qtribu",
       "official_repository": true,
