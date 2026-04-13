@@ -24,9 +24,10 @@ steps:
     uses: qgis-installation-finder
     with:
       search_paths:
-        - "%PROGRAMFILES%"
-        - C:\\OSGeo4W
         - "%PROGRAMFILES%\\QGIS"
+        - "%PROGRAMFILES%"
+        - "C:\\OSGeo4W"
+        - "/usr/bin/qgis"
       version_priority:
         - "3.44"
         - "3.40"
