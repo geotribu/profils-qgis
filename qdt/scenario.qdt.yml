@@ -28,8 +28,11 @@ steps:
         - C:\\OSGeo4W
         - "%PROGRAMFILES%\\QGIS"
       version_priority:
+        - "3.44"
+        - "3.40"
         - "3.34"
         - "3.28"
+        - "4.0"
 
   - name: Télécharge les profils depuis le dépôt Git distant
     uses: qprofiles-downloader
