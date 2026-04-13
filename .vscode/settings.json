@@ -9,6 +9,16 @@
     "files.associations": {
         "requirements*.txt": "pip-requirements"
     },
+    // JSON
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "files.insertFinalNewline": true
+    },
     // Extensions
     "yaml.schemas": {
         "https://raw.githubusercontent.com/qgis-deployment/qgis-deployment-toolbelt-cli/refs/heads/main/docs/schemas/scenario/qdt_scenario.json": [
