@@ -8,7 +8,7 @@
   "icon": "images/geotribu.ico",
   "qgisMinimumVersion": "3.40.4",
   "qgisMaximumVersion": "4.10.15",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "plugins": [
     {
       "name": "Layers menu from project",
@@ -22,7 +22,7 @@
       "folder_name": "qchat",
       "official_repository": true,
       "plugin_id": 4033,
-      "version": "1.3.0"
+      "version": "1.4.0"
     },
     {
       "name": "QTribu",
