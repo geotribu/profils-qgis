@@ -1,5 +1,5 @@
 # required
-qgis-deployment-toolbelt>=0.43.1,<1
+qgis-deployment-toolbelt>=0.44.0,<1
 
 # tooling
 check-jsonschema>=0.37.4,<1
