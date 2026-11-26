@@ -47,6 +47,7 @@ steps:
   - name: Synchronise les profils installés à partir de ceux téléchargés
     uses: qprofiles-synchronizer
     with:
+      qdt_watermark: variables
       sync_mode: only_new_version
 
   - name: Télécharge les plugins listés dans tous les profils téléchargés
