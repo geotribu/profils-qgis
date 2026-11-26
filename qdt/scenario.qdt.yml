@@ -80,6 +80,12 @@ steps:
           desktop: true
           start_menu: true
 
+  - name: Make QGIS open the profiles picker at startup
+    uses: default-profile-setter
+    with:
+      profile: "Geotribu"
+      force_profile_selection_policy: 2
+
   - name: Cleanup stale resources
     uses: cleanup-manager
     with:
