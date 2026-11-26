@@ -6,6 +6,7 @@
   "author": "Julien Moura",
   "email": "geotribu@gmail.com",
   "icon": "images/logo_ferrari.ico",
+  "qdtMinVersion": "0.48.1",
   "qgisMinimumVersion": "3.24.0",
   "qgisMaximumVersion": "3.99.15",
   "version": "1.1.0",
