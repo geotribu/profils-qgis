@@ -5,6 +5,7 @@ metadata:
   id: geotribu-profils-qgis
   description: >-
     Scénario QGIS Deployment Toolbelt pour déployer les profils QGIS de Geotribu.
+  qdt_min_version: "0.50.0"
 
 # Toolbelt settings
 settings:
@@ -59,7 +60,7 @@ steps:
   - name: Synchronise les plugins téléchargés avec ceux présents dans les profils installés
     uses: qplugins-synchronizer
     with:
-      action: create_or_restore
+      deletion_policy: trash_or_delete
 
   - name: Installe les splash screens personnalisés
     uses: splash-screen-manager
